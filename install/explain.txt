@@ -1,0 +1,57 @@
+VERSION='7.0.5'
+./configure
+--prefix=/usr/local/php/$VERSION
+--localstatedir=/usr/local/var
+--sysconfdir=/usr/local/etc/php/$VERSION
+--mandir=/usr/local/php/$VERSION/share/man
+--with-config-file-path=/usr/local/etc/php/$VERSION
+--with-config-file-scan-dir=/usr/local/etc/php/$VERSION/conf.d
+--enable-dba                                                                   #数据库抽象层
+#--with-ndbm                                                                    #数据库抽象层支持的DBA handler
+--enable-soap                                                                  #SOAP支持 感觉可以不用安装，因为数据库抽象层使用的是pdo
+--enable-wddx                                                                  #A XML-based technology
+--enable-ftp
+--enable-sockets
+--enable-shmop                                                                 #进程控制扩展 Shared Memory
+--enable-sysvsem                                                               #进程控制扩展 Semaphore [System V semaphore support]
+--enable-sysvshm                                                               #进程控制扩展 Semaphore [System V shared memory support]
+--enable-sysvmsg                                                               #进程控制扩展 Semaphore [System V messages support]
+--with-iconv-dir                                                               #国际化与字符编码支持 - iconv
+--enable-mbstring                                                              #国际化与字符编码支持 - 多字节字符串
+--enable-mbregex                                                                #国际化与字符编码支持 - 多字节字符串 正则支持
+--with-gettext                                                      #国际化与字符编码支持 - Gettext
+--enable-bcmath                                                                #数学扩展 - BCMath任意精度数学
+--enable-calendar                                                              #日期与时间相关扩展 - Calendar
+--with-zlib                                                                    #压缩与归档扩展 - Zlib Compression
+--with-zlib-dir                                                                #ZIP: Set the path to libz install prefix
+--with-ldap                                                                    #其它服务 - 轻量级目录访问协议:LDAP
+--with-ldap-sasl                                                               #Ldap SASL支持
+--with-xmlrpc                                                                  #Web 服务 - XMM-RPC
+--enable-exif                                                                  #图像生成和处理 - 可交换图像信息函数支持, GD库image_type_to_mime_type函数有依赖
+--with-gd                                                                      #图像生成和处理 - GD库
+--enable-gd-native-ttf                                                         #↑支持本地 TrueType 字符串函数
+--with-freetype-dir                                                 #↑激活FreeType 2的支持
+--with-jpeg-dir                                                     #↑激活jpeg-6b的支持
+--with-png-dir                                                      #↑激活png的支持,ps:libpng 需要[zlib library]配置中还要加上 --with-zlib-dir
+--with-snmp                                                               #其它服务 - SNMP协议扩展
+--with-libedit                                                                 #针对命令行的扩展 - GUN Readline
+--with-unixODBC=/usr                                                            #ODBC, 似乎须指定/usr
+--with-pdo-odbc=unixODBC,/usr                                                   #PDO ODBC, 注意格式
+--with-mhash                                                                   #加密扩展 - Mhash
+--with-curl                                                                    #其它服务 - CURL
+--enable-zip
+--with-bz2=/usr                                                                #压缩与归档扩展 Bzip2
+--disable-debug
+--with-openssl                                                            #OPENSSL
+#--with-lib=lib64  指定到/usr/lib64下查找，默认是lib下
+--with-kerberos                                                                #OPENSSL Kerberos网络授权协议支持
+--with-xsl
+--enable-fpm
+--with-fpm-user=www
+--with-fpm-group=www
+--with-mysql-sock=/tmp/mysql.sock
+--with-mysqli=mysqlnd
+--with-mysql=mysqlnd
+--with-pdo-mysql=mysqlnd
+--enable-pcntl
+--with-libxml-dir
