@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-echo '确认已经添加/usr/local/bin 到PATH环境变量';
+echo '确认已经添加/usr/local/bin 到PATH环境变量?[y/n]';
+read in
+if [ $in != 'y' ]
+then
+    echo 'Cancle ... '
+    exit
+fi
 PHPVERSION='7.0.5'
 NGINXVERSION='nginx-1.9.15'
 
