@@ -7,7 +7,7 @@ then
     exit
 fi
 PHPVERSION='7.0.5'
-NGINXVERSION='nginx-1.9.15'
+NGINXVERSION='1.9.15'
 
 useradd www
 
@@ -16,7 +16,7 @@ ROOTPATH=`pwd`
 cd $ROOTPATH/lnmp
 wget http://sg3.php.net/distributions/php-${PHPVERSION}.tar.gz -O php-${PHPVERSION}.tar.gz
 tar -zxvf php-${PHPVERSION}.tar.gz
-wget http://nginx.org/download/${VERSION}.tar.gz -O nginx-${NGINXVERSION}.tar.gz
+wget http://nginx.org/download/nginx-${VERSION}.tar.gz -O nginx-${NGINXVERSION}.tar.gz
 tar -zxvf ${NGINXVERSION}.tar.gz
 wget https://github.com/h5bp/server-configs-nginx/archive/master.zip -O server-configs-nginx-master.zip
 unzip server-configs-nginx-master.zip
