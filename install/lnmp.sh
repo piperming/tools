@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+echo '确认已经添加/usr/local/bin 到PATH环境变量';
 PHPVERSION='7.0.5'
 NGINXVERSION='nginx-1.9.15'
 
@@ -37,7 +38,7 @@ cp $ROOTPATH/php-src-php-$PHPVERSION/php.ini-production  /etc/php/$PHPVERSION/ph
 mv /etc/php/$PHPVERSION/php-fpm.conf.default /etc/php/$PHPVERSION/php-fpm.conf
 mv /etc/php/$PHPVERSION/php-fpm.d/www.conf.default /etc/php/$PHPVERSION/php-fpm.d/www.conf
 
-cd /usr/bin
+cd /usr/local/bin
 ln -s /usr/local/php/$PHPVERSION/bin/pear pear
 ln -s /usr/local/php/$PHPVERSION/bin/pecl pecl
 ln -s /usr/local/php/$PHPVERSION/bin/phar phar

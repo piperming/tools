@@ -3,10 +3,10 @@ VERSION='7.0.5'
 ./configure \
 --prefix=/usr/local/php/$VERSION \
 --localstatedir=/usr/local/var \
---sysconfdir=/usr/local/etc/php/$VERSION \
+--sysconfdir=/etc/php/$VERSION \
 --mandir=/usr/local/php/$VERSION/share/man \
---with-config-file-path=/usr/local/etc/php/$VERSION \
---with-config-file-scan-dir=/usr/local/etc/php/$VERSION/conf.d \
+--with-config-file-path=/etc/php/$VERSION \
+--with-config-file-scan-dir=/etc/php/$VERSION/conf.d \
 --enable-dba \
 --enable-soap \
 --enable-wddx \
