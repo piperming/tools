@@ -8,10 +8,10 @@ useradd www
 mkdir lnmp
 ROOTPATH=`pwd`
 cd $ROOTPATH/lnmp
-wget http://sg3.php.net/distributions/php-{$PHPVERSION}.tar.gz -O php-{$PHPVERSION}.tar.gz
-tar -zxvf php-{$PHPVERSION}.tar.gz
-wget http://nginx.org/download/{$VERSION}.tar.gz -O nginx-{$NGINXVERSION}.tar.gz
-tar -zxvf {$NGINXVERSION}.tar.gz
+wget http://sg3.php.net/distributions/php-${PHPVERSION}.tar.gz -O php-${PHPVERSION}.tar.gz
+tar -zxvf php-${PHPVERSION}.tar.gz
+wget http://nginx.org/download/${VERSION}.tar.gz -O nginx-${NGINXVERSION}.tar.gz
+tar -zxvf ${NGINXVERSION}.tar.gz
 wget https://github.com/h5bp/server-configs-nginx/archive/master.zip -O server-configs-nginx-master.zip
 unzip server-configs-nginx-master.zip
 wget http://repo.mysql.com//mysql57-community-release-el6-8.noarch.rpm
